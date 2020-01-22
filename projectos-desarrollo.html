@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LevisCode</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/cd4468ca9a.js"></script>
+    <link rel="stylesheet" href="css/project.des.css">
+    <link rel="icon" type="image.png" href="img/focus.png" />
+    <link rel="stylesheet" href="flexslider.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script src="js/jquery.flexslider.js"></script>
+</head>
+
+<body>
+    <div class="contenedor active" id="contenedor">
+        <header class="header">
+            <div class="contenedor-logo">
+                <button id="boton-menu" class="boton-menu"><i class="fas fa-bars"></i></button>
+                <a href="#" class="logo"></a><i class="far fa-lightbulb"></i><span>LevisCode</span></a>
+            </div>
+
+            <div class="botones-header">
+                <button><i class="fas fa-bell"></i></button>
+                <button><i class="fas fa-caret-square-down"></i></button>
+                <button><i class="fas fa-play-circle"></i></button>
+                <a href="#" class="avatar"><img src="img/avatar.jpg" alt="Avatar"></a>
+            </div>
+        </header>
+
+        <nav class="menu-lateral">
+            <a href="index.html" class="active"><i class="fas fa-home"></i>Pagina Principal</a>
+            <a href="videos-code.html"><i class="fas fa-play-circle"></i>Videos</a>
+            <a href="projectos-desarrollo.html"><i class="fas fa-spinner"></i>Projectos en Desarrollo</a>
+
+            <hr>
+
+            <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+            <a href="#"><i class="fas fa-cogs"></i>Configuracion</a>
+            <a href="Enviar-mensaje.html"><i class="fas fa-envelope"></i>Enviar Mensaje</a>
+        </nav>
+
+        <main class="main">
+
+            <header>
+                <div class="logo-des">
+                    <a href="#" class="avatar2"><img src="img/focus.png" width="50" height="50" alt="Avatar"></a>
+                    <h1>LevisCode</h1>
+                    <p>Desarrollo Personal</p>
+
+                </div>
+                <form action="">
+                    <input type="text" class="barra-busqueda" id="barra-busqueda" placeholder="Buscar">
+                </form>
+                <div class="categorias" id="categorias">
+                    <a href="#" class="activo">Todos</a>
+                    <a href="#">Projectos en Desarrollo</a>
+                    <a href="#">Projectos Terminados</a>
+                </div>
+
+
+
+            </header>
+
+            <section class="grid" id="grid">
+                <div class="item" data-categoria="projectos en desarrollo" data-etiquetas="projectos en desarrollo projectos proceso desarrollo" data-descripcion="Sin descripcion">
+                    <div class="item-contenido">
+                        <img src="img/perfect.png" height="250" width="450px" alt="">
+                    </div>
+                </div>
+                <div class="item" data-categoria="projectos en desarrollo" data-etiquetas="projectos en desarrollo projectos proceso desarrollo" data-descripcion="Sin descripcion">
+                    <div class="item-contenido">
+                        <img src="img/STEP2.jpg" height="250" width="450px" alt="">
+                    </div>
+                </div>
+                <div class="item" data-categoria="projectos terminados" data-etiquetas="projectos terminados finalizado  terminado " data-descripcion="Desarrollo Personal">
+                    <div class="item-contenido">
+                        <img src="img/foco-image.jpg" height="250" width="450px" alt="">
+                    </div>
+                </div>
+
+
+            </section>
+            <section class="overlay " id="overlay">
+                <div class="contenedor-img">
+                    <button id="btn-cerrar-popup"><i class="fas fa-times"></i></button>
+                    <img src="" alt="">
+                </div>
+                <p class="descripcion"></p>
+            </section>
+
+        </main>
+
+
+
+
+    </div>
+    <script src="https://unpkg.com/web-animations-js@2.3.2/web-animations.min.js"></script>
+    <script src="https://unpkg.com/muuri@0.8.0/dist/muuri.min.js"></script>
+    <script src="js/project.js"></script>
+    <script src="https://kit.fontawesome.com/cd4468ca9a.js" crossorigin="anonymous"></script>
+    <script src="js/main.js "></script>
+</body>
+
+</html>

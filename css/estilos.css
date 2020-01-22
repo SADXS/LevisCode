@@ -1,0 +1,319 @@
+@font-face {
+    font-family: 'flexslider-icon';
+    src: url('../fonts/flexslider-icon.eot');
+    src: url('../fonts/flexslider-icon.eot?#iefix') format('embedded-opentype'), url('../fonts/flexslider-icon.woff') format('woff'), url('../fonts/flexslider-icon.ttf') format('truetype'), url('../fonts/flexslider-icon.svg#flexslider-icon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.contenedor {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(90px, 90px) auto;
+    grid-template-rows: 60px auto;
+    grid-template-areas: "header header" "menu contenido";
+    transition: all .3s ease;
+}
+
+.contenedor.active {
+    grid-template-columns: minmax(300px, 18%) auto;
+}
+
+
+/*--------HEADER---------*/
+
+.header {
+    grid-area: header;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    justify-content: space-between;
+    grid-gap: 20px;
+    grid-template-areas: "logo busqueda iconos";
+}
+
+.header .contenedor-logo {
+    grid-area: logo;
+    display: flex;
+    align-items: center;
+}
+
+.header .contenedor-logo .boton-menu {
+    border: none;
+    padding: 10px;
+    background: none;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 100px;
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+
+.header .contenedor-logo .boton-menu:hover {
+    background: #e7e7e7;
+}
+
+.header .contenedor-logo .logo .fas {
+    background: #ff0000;
+    padding: 7px 12px;
+    border-radius: 4px;
+    font-size: 8px;
+    color: #fff;
+    position: relative;
+    top: -4px;
+    margin-right: 4px;
+}
+
+.header.contenedor-logo .logo {
+    font-size: 20px;
+    position: relative;
+    top: 2px;
+}
+
+header form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0px;
+}
+
+header .barra-busqueda {
+    width: 70%;
+    height: 40px;
+    line-height: 40px;
+    background: #fff;
+    padding: 0 20px;
+    border-radius: 100px;
+    border: black;
+    text-align: center;
+    font-size: 16px;
+}
+
+.header .botones-header {
+    grid-area: iconos;
+    display: flex;
+    align-items: center;
+}
+
+.header .botones-header button {
+    background: none;
+    border: none;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    padding: 7px 12px;
+    border-radius: 100px;
+    color: #828282;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.header .botones-header button:hover {
+    background: #e7e7e7;
+}
+
+.header .botones-header .avatar {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+}
+
+.header .botones-header .avatar img {
+    vertical-align: top;
+    width: 100%;
+    border-radius: 100px;
+}
+
+
+/*--------MENU-LATERAL---------*/
+
+.menu-lateral {
+    grid-area: menu;
+    background: #fff;
+    overflow: hidden;
+}
+
+.menu-lateral a {
+    display: block;
+    padding: 15px 35px;
+    color: #000;
+    min-width: 850px;
+}
+
+.menu-lateral a:hover {
+    background: #e5e5e5;
+}
+
+.menu-lateral a.active {
+    background: #e5e5e5;
+}
+
+.menu-lateral .fas {
+    color: #606060;
+    margin-right: 35px;
+    width: 20px;
+    text-align: center;
+}
+
+.menu-lateral a.active .fas {
+    color: #009ad0;
+}
+
+.menu-lateral hr {
+    margin: 20px 0;
+    border: 1px solid #dfdfdf;
+}
+
+.main {
+    grid-area: contenido;
+    background: white;
+    padding: 40px;
+}
+
+.main .grid-images {
+    display: grid;
+    grid-gap: 40px 20px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.main .grid-images .images {
+    width: 70%;
+}
+
+.flexslider {
+    width: 100%;
+    position: relative;
+}
+
+.slides {
+    overflow: hidden;
+}
+
+.slides img {
+    width: 100%;
+    height: 450px;
+    object-fit: contain;
+}
+
+.slides,
+.flex-control-nav,
+.flex-direction-nav {
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+
+.flex-control-nav {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 5%;
+    z-index: 999;
+}
+
+.flex-control-nav li {
+    display: inline-block;
+    margin: 0 6px;
+}
+
+.flex-control-nav li a {
+    display: block;
+    background: #606060;
+    width: 12px;
+    height: 12px;
+    border-radius: 12px;
+    text-indent: -9999px;
+}
+
+.flex-control-nav li a:hover {
+    background: #009ad0;
+}
+
+.flex-control-nav li a.flex-active {
+    background: #009ad0;
+}
+
+.flex-direction-nav a {
+    display: block;
+    text-decoration: none;
+    position: absolute;
+    top: 50%;
+    z-index: 999;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.flex-direction-nav .flex-prev {
+    left: 0;
+}
+
+.flex-direction-nav .flex-next {
+    right: 0;
+}
+
+.flex-direction-nav a:before {
+    font-family: "flexslider-icon";
+    font-size: 40px;
+    display: inline-block;
+    content: '\f001';
+    color: #000;
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.flex-direction-nav a.flex-next:before {
+    content: '\f002';
+}
+
+.flex-caption p {
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    width: 100%;
+    font-size: 45px;
+    color: #000;
+    font-weight: bold;
+}
+
+.flexslider:hover .flex-direction-nav .flex-prev {
+    opacity: 0.7;
+    left: 10px;
+}
+
+.flexslider:hover .flex-direction-nav .flex-prev:hover {
+    opacity: 1;
+}
+
+.flexslider:hover .flex-direction-nav .flex-next {
+    opacity: 0.7;
+    right: 10px;
+}
+
+.flexslider:hover .flex-direction-nav .flex-next:hover {
+    opacity: 1;
+}

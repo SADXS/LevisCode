@@ -1,0 +1,196 @@
+        @font-face {
+            font-family: 'flexslider-icon';
+            src: url('../fonts/flexslider-icon.eot');
+            src: url('../fonts/flexslider-icon.eot?#iefix') format('embedded-opentype'), url('../fonts/flexslider-icon.woff') format('woff'), url('../fonts/flexslider-icon.ttf') format('truetype'), url('../fonts/flexslider-icon.svg#flexslider-icon') format('svg');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Raleway', sans-serif;
+        }
+        
+        body {
+            font-family: 'Raleway', sans-serif;
+        }
+        
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        
+        .contenedor {
+            width: 100%;
+            min-height: 100vh;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: minmax(90px, 90px) auto;
+            grid-template-rows: 60px auto;
+            grid-template-areas: "header header" "menu contenido";
+            transition: all .3s ease;
+        }
+        
+        .contenedor.active {
+            grid-template-columns: minmax(300px, 18%) auto;
+        }
+        /*--------HEADER---------*/
+        
+        .header {
+            grid-area: header;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            align-items: center;
+            justify-content: space-between;
+            grid-gap: 20px;
+            grid-template-areas: "logo busqueda iconos";
+        }
+        
+        .header .contenedor-logo {
+            grid-area: logo;
+            display: flex;
+            align-items: center;
+        }
+        
+        .header .contenedor-logo .boton-menu {
+            border: none;
+            padding: 10px;
+            background: none;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 100px;
+            width: 50px;
+            height: 50px;
+            margin-right: 20px;
+        }
+        
+        .header .contenedor-logo .boton-menu:hover {
+            background: #e7e7e7;
+        }
+        
+        .header .contenedor-logo .logo .fas {
+            background: #ff0000;
+            padding: 7px 12px;
+            border-radius: 4px;
+            font-size: 8px;
+            color: #fff;
+            position: relative;
+            top: -4px;
+            margin-right: 4px;
+        }
+        
+        .header.contenedor-logo .logo {
+            font-size: 20px;
+            position: relative;
+            top: 2px;
+        }
+        
+        .header .botones-header {
+            grid-area: iconos;
+            display: flex;
+            align-items: center;
+        }
+        
+        .header .botones-header button {
+            background: none;
+            border: none;
+            width: 40px;
+            height: 40px;
+            font-size: 18px;
+            padding: 7px 12px;
+            border-radius: 100px;
+            color: #828282;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+        
+        .header .botones-header button:hover {
+            background: #e7e7e7;
+        }
+        
+        .header .botones-header .avatar {
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+        }
+        
+        .header .botones-header .avatar img {
+            vertical-align: top;
+            width: 100%;
+            border-radius: 100px;
+        }
+        /*--------MENU-LATERAL---------*/
+        
+        .menu-lateral {
+            grid-area: menu;
+            background: #fff;
+            overflow: hidden;
+        }
+        
+        .menu-lateral a {
+            display: block;
+            padding: 15px 35px;
+            color: #000;
+            min-width: 850px;
+        }
+        
+        .menu-lateral a:hover {
+            background: #e5e5e5;
+        }
+        
+        .menu-lateral a.active {
+            background: #e5e5e5;
+        }
+        
+        .menu-lateral .fas {
+            color: #606060;
+            margin-right: 35px;
+            width: 20px;
+            text-align: center;
+        }
+        
+        .menu-lateral a.active .fas {
+            color: #009ad0;
+        }
+        
+        .menu-lateral hr {
+            margin: 20px 0;
+            border: 1px solid #dfdfdf;
+        }
+        
+        header .logo-des {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        header .logo-des p {
+            color: lightskyblue;
+        }
+        
+        div .nardo p {
+            margin-top: 15px;
+            color: black;
+            text-align: center;
+        }
+        
+        header form {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        header .barra-busqueda {
+            width: 70%;
+            height: 40px;
+            line-height: 40px;
+            background: #fff;
+            padding: 0 20px;
+            border-radius: 100px;
+            border: none;
+            text-align: center;
+            font-size: 16px;
+        }
